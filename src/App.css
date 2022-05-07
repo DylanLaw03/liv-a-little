@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.navbarItem {
+  text-align: center;
+  text-decoration: none;
+  background-color: #EBC300;
+  height: 50px;
+  border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+.NavbarText {
+  font-size: 24px;
+  align-self: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 150px;
+  height: 100%;
+  background-color: #EB9B00;
+}
+.home {
+  margin-left: 150px;
+}
+
+.store {
+  margin-left: 150px;
+}
+
+.about {
+  margin-left: 150px;
+  font-size: 120px;
+}
+
+.contact {
+  margin-left: 150px;
+}
