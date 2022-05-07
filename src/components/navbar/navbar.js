@@ -7,6 +7,7 @@ import { NavbarItem } from './navbaritem';
 export const NavBar = (props) => {
     
     return (
+        // return list of all pages
         <div className='navbar'>
                 <NavbarItem text="Home" link="/" />
                 <NavbarItem text="Store" link="/store" />
