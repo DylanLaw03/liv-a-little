@@ -1,11 +1,12 @@
 import React from 'react';
-import { PostForm } from '../components/post/postform';
-
+import { PostForm } from '../components/new-post/postform';
+import { PostContainer } from '../components/post/postcontainer';
 
 export const HomePage = (props) => {
     return (
         <div className='home'>
             <PostForm />
+            <PostContainer />
         </div>
     )
 }

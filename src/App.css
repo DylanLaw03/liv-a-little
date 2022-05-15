@@ -1,3 +1,5 @@
+/*Navbar CSS*/
+
 .navLink {
   display: flex;
   align-items: center;
@@ -23,7 +25,10 @@
   background-color: #EB9B00;
   border-top: 1px solid gray;
 }
+
 .home {
+  display: flex;
+  flex-direction: column;
   margin-left: 150px;
 }
 
@@ -38,4 +43,69 @@
 
 .contact {
   margin-left: 150px;
+}
+
+/* Post Submission CSS */
+
+.post-form-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: red;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.post-form-title {
+  font-size: 24px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+.post-image-submission {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: beige;
+}
+
+.image-label {
+  background-color: yellowgreen;
+}
+
+
+.post-body-label {
+  background-color: white;
+}
+
+.post-text-input-box {
+  background-color: white;
+}
+
+.post-text-input-div {
+  background-color: white;
+  border: 2px solid black;
+}
+
+.post-submit-button {
+  background: blueviolet;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.image-input {
+  background-color: aqua;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  left: 35%;
+  width: fit-content;
+}
+
+/* prevent all textboxes from being resizes */
+
+textarea {
+  resize: none;
 }
