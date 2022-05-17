@@ -5,19 +5,13 @@ import { Box, Button } from '@material-ui/core';
 
 export const HomePage = (props) => {
 
-    const handleNextPageClick = () => {
-        props.pageNum + 1;
-        console.log(props.pageNum);
-    }
-
-    console.log(props.pageNum)
 
     //buttons to handle next page and prev page
 
     return (
         <Box className='home'>
             <PostForm />
-            <PostContainer pageNum={props.pageNum}/>
+            <PostContainer pageNum={1}/>
 
             <div className='prev-page-button-div'>
                 <Button className='prev-page-button'
@@ -32,7 +26,7 @@ export const HomePage = (props) => {
                 <Button className='next-page-button'
                 variant='contained'
                 disableElevation 
-                onClick={handleNextPageClick}>
+                onClick={console.log('wyd')}>
                     Next Page
                 </Button>
             </div>
