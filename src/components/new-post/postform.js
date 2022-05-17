@@ -5,9 +5,9 @@ import { Button, TextField } from '@material-ui/core';
 // send postImg as base64 string and postText as string, returns the http respone
 const uploadPost = async (postBody, postImg) => {
 
+    console.log(postImg);
     // POST to /uploadPost
     let response = await fetch("https://liv-a-little-api.herokuapp.com/uploadPost",{
-
     method: "POST",
     headers: {
         'accept': 'application/json',
@@ -19,7 +19,6 @@ const uploadPost = async (postBody, postImg) => {
 
     return response;
 }
-
 export const PostForm = (props) => {
 
     // holds post info, states to handle change
@@ -42,7 +41,6 @@ export const PostForm = (props) => {
 
     // handlers for information change
     const handlePostBodyChange = (event) => {
-        console.log(event.target.value)
         setPostBody(event.target.value)
     }
     
@@ -65,34 +63,38 @@ export const PostForm = (props) => {
     }
     // return form
     return (
-        <div className='post-form-div'>
-            <form className='post-form' encType="mutlipart/form-data">
-                <p className='post-form-title'>Create New Post</p>
+        <box className='post-form-box'>
+            <div className='post-form-div'>
+                <form className='post-form' encType="mutlipart/form-data">
+                    <p className='post-form-title'>Create New Post</p>
 
-                <div className='post-image-submission'>
-                    <label className='image-label' htmlFor="img">Add an Image</label>
-                    <br />
-                    <input className='image-input' type="file" id="img" accept="image/png, image/jpeg"/>
-                </div>
+                    <div className='post-image-submission'>
+                        <label className='image-label' htmlFor="img">Add an Image</label>
+                        <br />
+                        <input className='image-input' type="file" id="img" accept="image/png, image/jpeg"/>
+                    </div>
 
-                <label className='post-body-label' htmlFor="postBody">Post</label>
-                
-                <div className='post-text-input-div'>
-                    <TextField className='post-text-input-box'
-                    multiline
-                    id="postBody"
-                    minRows={6}
-                    fullWidth
-                    onChange={handlePostBodyChange}
-                    value={postBody}/>
-                    <br />
-                </div>
-                <Button className='post-submit-button'
-                variant='contained'
-                disableElevation 
-                onClick={handleSubmit}>Submit</Button>
+                    <label className='post-body-label' htmlFor="postBody">Post</label>
+                    
+                    <div className='post-text-input-div'>
+                        <TextField className='post-text-input-box'
+                        multiline
+                        id="postBody"
+                        minRows={6}
+                        fullWidth
+                        onChange={handlePostBodyChange}
+                        value={postBody}
+                        InputProps={{ disableUnderline: true }}
+                        />
+                        <br />
+                    </div>
+                    <Button className='post-submit-button'
+                    variant='contained'
+                    disableElevation 
+                    onClick={handleSubmit}>Submit</Button>
 
-            </form>
-        </div>
+                </form>
+            </div>
+        </box>
     )
 }

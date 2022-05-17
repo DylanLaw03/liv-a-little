@@ -4,9 +4,9 @@ import { PostContainer } from '../components/post/postcontainer';
 
 export const HomePage = (props) => {
     return (
-        <div className='home'>
+        <box className='home'>
             <PostForm />
             <PostContainer />
-        </div>
+        </box>
     )
 }
