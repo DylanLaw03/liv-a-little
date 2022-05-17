@@ -5,8 +5,11 @@ import { useEffect, useState } from "react";
 
 
 // container to hold an entire page of posts
-// pass in page number
+// pass in page number as pageNum prop
 export const PostContainer = props => {
+    const lowerBound = (10 * props.pageNum) - 9; // page 1 would be posts 1-10
+    const upperBound = (10 * props.pageNum) + 1; // upperbound is exclusive
+
     // posts State for retrieving from API
     const [postsState, setPostsState] = useState({});
     // arr to hold post Components
@@ -34,7 +37,7 @@ export const PostContainer = props => {
 
     // use useEffect to render posts once, on page load
     useEffect(() => {
-        getPosts("1", "11");
+        getPosts(lowerBound, upperBound);
     }, []); // empty arr means no dependency states
 
     // build posts for container

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, TextField } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 
 // function to upload post....
 // send postImg as base64 string and postText as string, returns the http respone
@@ -19,6 +20,7 @@ const uploadPost = async (postBody, postImg) => {
 
     return response;
 }
+
 export const PostForm = (props) => {
 
     // holds post info, states to handle change
@@ -55,29 +57,39 @@ export const PostForm = (props) => {
         // handle promise, if resolved, submit post, otherwise alert user
         postImgPromise.then(value => {
             uploadPost(postBody, value);
+        }).then(() => {
+            alert("Post Successfully Submitted")
         }).catch(err => {
             alert("There was an error submitting your post. Please try again later.")
             console.log(err);
         });
 
     }
+    
     // return form
     return (
-        <box className='post-form-box'>
+        <Box className='post-form-box'>
             <div className='post-form-div'>
                 <form className='post-form' encType="mutlipart/form-data">
                     <p className='post-form-title'>Create New Post</p>
 
-                    <div className='post-image-submission'>
-                        <label className='image-label' htmlFor="img">Add an Image</label>
-                        <br />
-                        <input className='image-input' type="file" id="img" accept="image/png, image/jpeg"/>
+                    <div className='post-image-submission-div'>
+                        <label className='image-label' htmlFor="img">
+                            <div>
+                                <input className='image-input' type="file" id="img" accept="image/png, image/jpeg"/>
+                            </div>
+                            <Button className='post-image-submission-button'
+                            component='span'
+                            color="primary"
+                            variant="contained"
+                            disableElevation>
+                                + UPLOAD PHOTO
+                            </Button>
+                        </label>
                     </div>
-
-                    <label className='post-body-label' htmlFor="postBody">Post</label>
                     
                     <div className='post-text-input-div'>
-                        <TextField className='post-text-input-box'
+                        <TextField className='post-text-input-field'
                         multiline
                         id="postBody"
                         minRows={6}
@@ -88,13 +100,15 @@ export const PostForm = (props) => {
                         />
                         <br />
                     </div>
-                    <Button className='post-submit-button'
-                    variant='contained'
-                    disableElevation 
-                    onClick={handleSubmit}>Submit</Button>
+                    <div className='post-submit-button-div'>
+                        <Button className='post-submit-button'
+                        variant='contained'
+                        disableElevation 
+                        onClick={handleSubmit}>Submit</Button>
+                    </div>
 
                 </form>
             </div>
-        </box>
+        </Box>
     )
 }

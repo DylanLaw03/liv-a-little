@@ -1,5 +1,10 @@
-/*Navbar CSS*/
+/* prevent all textboxes from being resizes */
 
+textarea {
+  resize: none;
+}
+
+/*Navbar CSS*/
 .navLink {
   display: flex;
   align-items: center;
@@ -58,9 +63,11 @@
 
 .post-form-div {
   display: flex;
-  justify-content: center;
+  align-content: center;
   flex-direction: column;
-  background-color: red;
+  background-color: wheat;
+  border: solid black 3px;
+  border-radius: 5px;
   width: 70%;
   margin-bottom: 10px;
 }
@@ -71,52 +78,53 @@
   text-align: center;
 }
 
-.post-image-submission {
+.post-image-submission-div {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  background-color: beige;
 }
 
 .image-label {
-  background-color: yellowgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-.post-body-label {
-  background-color: white;
-}
-
-.post-text-input-box {
-  background-color: white;
+.post-image-submission-button {
+  width: fit-content;
+  background-color: yellow;
 }
 
 .post-text-input-div {
   background-color: white;
   border: 2px solid black;
+  margin: 5px;
+}
+
+.post-body-label {
+  background-color: white;
+}
+
+.post-text-input-field{
+  background-color: white;
+}
+
+.post-submit-button-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
 }
 
 .post-submit-button {
-  background: blueviolet;
-  margin-bottom: 15px;
   position: relative;
+  left: 45%;
 }
 
 .image-input {
-  background-color: aqua;
-  border: 2px solid black;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  position: relative;
-  left: 35%;
-  width: fit-content;
-}
-
-/* prevent all textboxes from being resizes */
-
-textarea {
-  resize: none;
+  background-color: black;
+  display: none;
 }
 
 /* Posts CSS */
@@ -132,7 +140,7 @@ textarea {
   flex-direction: column;
   align-content: center;
   width: 80%;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .post-box-inner-wrapper {
