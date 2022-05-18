@@ -171,3 +171,28 @@ textarea {
 .post-content {
   font-size: 20px;
 }
+
+/* CSS for Change Page Buttons */
+
+.change-page-button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px
+}
+
+.prev-page-button-div {
+  width: 15%;
+  margin-right: 5px;
+}
+
+.next-page-button-div {
+  width: 15%;
+  margin-left: 5px;
+}
+.prev-page-button {
+  width: 100%;
+}
+.next-page-button {
+  width: 100%;
+}

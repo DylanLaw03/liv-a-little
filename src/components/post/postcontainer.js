@@ -18,7 +18,7 @@ export const PostContainer = props => {
 
     const getPosts = async (lowerBound, upperBound) => {
         // POST to /getPosts
-        const response = await fetch("https://liv-a-little-api.herokuapp.com/getPosts",{
+        fetch("https://liv-a-little-api.herokuapp.com/getPosts",{
         method: "POST",
         headers: {
             'accept': 'application/json',
@@ -38,7 +38,7 @@ export const PostContainer = props => {
     // use useEffect to render posts once, on page load
     useEffect(() => {
         getPosts(lowerBound, upperBound);
-    }, [props.pageNum]); // empty arr means no dependency states
+    }, [props.pageNum, lowerBound, upperBound]); // empty arr means no dependency states
 
     // build posts for container
     for (let i = 0; i < postsState.length; i++) {
