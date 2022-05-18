@@ -38,7 +38,7 @@ export const PostContainer = props => {
     // use useEffect to render posts once, on page load
     useEffect(() => {
         getPosts(lowerBound, upperBound);
-    }, []); // empty arr means no dependency states
+    }, [props.pageNum]); // empty arr means no dependency states
 
     // build posts for container
     for (let i = 0; i < postsState.length; i++) {
@@ -49,7 +49,9 @@ export const PostContainer = props => {
 
     // return container
     return (
+        
         <Box className="post-container">
+            {lowerBound}<br/>{upperBound}
             {posts}
         </Box>
     )
