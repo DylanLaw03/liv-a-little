@@ -49,9 +49,7 @@ export const PostContainer = props => {
 
     // return container
     return (
-        
         <Box className="post-container">
-            {lowerBound}<br/>{upperBound}
             {posts}
         </Box>
     )

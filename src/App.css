@@ -13,7 +13,7 @@ textarea {
   text-decoration: none;
   color: black;
   background-color: #FFB632;
-  height: 50px;
+  height: 75px;
   border-bottom: 1px solid gray;
   border-right: 1px solid gray;
 }
@@ -25,11 +25,23 @@ textarea {
   position: fixed;
   left: 0px;
   top: 0px;
-  width: 150px;
+  width: 160px;
   height: 100%;
   background-color: #ffc55b;
   border-top: 1px solid gray;
 }
+
+.top-left-logo-box {
+  max-width: 100%;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+.top-left-logo-image {
+  width: 160px;
+}
+
+
 /* page css below */
 .home {
   display: flex;
@@ -93,7 +105,6 @@ textarea {
 
 .post-image-submission-button {
   width: fit-content;
-  background-color: yellow;
 }
 
 .post-text-input-div {
@@ -129,18 +140,23 @@ textarea {
 
 /* Posts CSS */
 .post-container {
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: purple;
+  width: 80%;
+  padding-top: 10px;
 }
 
 .post-box {
   background-color: yellow;
   display: flex;
   flex-direction: column;
-  align-content: center;
   width: 80%;
   margin-bottom: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
 }
 
 .post-box-inner-wrapper {
@@ -178,7 +194,8 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .prev-page-button-div {
