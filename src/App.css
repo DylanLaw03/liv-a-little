@@ -12,7 +12,6 @@ textarea {
   font-size: 24px;
   text-decoration: none;
   color: black;
-  background-color: #FFB632;
   height: 75px;
   border-bottom: 1px solid gray;
   border-right: 1px solid gray;
@@ -27,7 +26,6 @@ textarea {
   top: 0px;
   width: 160px;
   height: 100%;
-  background-color: #ffc55b;
   border-top: 1px solid gray;
 }
 
@@ -77,8 +75,7 @@ textarea {
   display: flex;
   align-content: center;
   flex-direction: column;
-  background-color: wheat;
-  border: solid black 3px;
+  border: solid 3px blue;
   border-radius: 5px;
   width: 70%;
   margin-bottom: 10px;
@@ -144,18 +141,17 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: purple;
   width: 80%;
   padding-top: 10px;
 }
 
 .post-box {
-  background-color: yellow;
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   width: 80%;
   margin-bottom: 10px;
-  border: 3px solid black;
+  border: 3px solid blue;
   border-radius: 5px;
 }
 
