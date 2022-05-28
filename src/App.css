@@ -46,21 +46,24 @@ textarea {
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  left: 150px;
+  left: 151px;
   width: calc(100% - 150px);
 }
 
 .store {
-  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 151px;
 }
 
 .about {
-  margin-left: 150px;
+  margin-left: 151px;
   font-size: 120px;
 }
 
 .contact {
-  margin-left: 150px;
+  margin-left: 151px;
 }
 
 /* Post Submission CSS */
@@ -72,6 +75,7 @@ textarea {
 }
 
 .post-form-div {
+  background-color: #fdf9d8;
   display: flex;
   align-content: center;
   flex-direction: column;
@@ -146,7 +150,7 @@ textarea {
 }
 
 .post-box {
-  background-color: whitesmoke;
+  background-color: #fdf9d8;
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -181,6 +185,7 @@ textarea {
 }
 
 .post-content {
+  flex-grow: 1;
   font-size: 20px;
 }
 
@@ -208,4 +213,40 @@ textarea {
 }
 .next-page-button {
   width: 100%;
+}
+
+/* Order Form */
+
+.order-form-box {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: fit-content;
+  background-color: #fdf9d8;
+  border: 3px solid blue;
+  border-radius: 5px;
+  padding: 20px;
+}
+.order-form-name-box {
+  margin: 10px;
+}
+
+.order-form-phone-number-box {
+  margin: 10px;
+}
+
+.order-form-number-stickers-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+.order-form-number-stickers {
+  margin-left: 10px;
+}
+
+.order-form-submit-button-box {
+  margin: 10px;
 }
