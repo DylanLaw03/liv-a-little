@@ -15,7 +15,7 @@ const sendPurchaseRequest = async (name, contactInfo, numStickers) => {
       },
     body: JSON.stringify({"name": name,
                         "contactInfo": contactInfo,
-                        "numSticker": numStickers})
+                        "numStickers": numStickers})
     })
 
     return response;
@@ -30,6 +30,7 @@ export const OrderForm = (props) => {
 
     // handlers
     const handleSubmit = async (event) => {
+        console.log(numStickers)
         let request = await sendPurchaseRequest(name, phoneNumber, numStickers);
         if (request.status === 200) {
             alert("Request Sent")
