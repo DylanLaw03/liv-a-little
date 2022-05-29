@@ -4,6 +4,25 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { useState } from 'react';
 import InputLabel from '@material-ui/core/InputLabel';
 
+const sendPurchaseRequest = async (name, contactInfo, numStickers) => {
+
+    // POST to /purchaseRequest
+    let response = await fetch("https://liv-a-little-api.herokuapp.com/purchaseRequest",{
+    method: "POST",
+    headers: {
+        'accept': 'application/json',
+        'Content-Type': "application/json"
+      },
+    body: JSON.stringify({"name": name,
+                        "contactInfo": contactInfo,
+                        "numSticker": numStickers})
+    })
+
+    return response;
+}
+
+
+
 export const OrderForm = (props) => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('')
@@ -11,9 +30,11 @@ export const OrderForm = (props) => {
 
     // handlers
     const handleSubmit = async (event) => {
-        console.log(numStickers);
-        console.log(name);
-        console.log(phoneNumber);
+        let request = await sendPurchaseRequest(name, phoneNumber, numStickers);
+        if (request.status === 200) {
+            alert("Request Sent")
+        }
+
     }
 
     const handleNameChange = (event) => {
