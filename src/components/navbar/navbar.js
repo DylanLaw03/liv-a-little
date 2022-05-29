@@ -10,34 +10,42 @@ export const NavBar = (props) => {
   return (
     <Box className='navbar'>
 
-        <Button className='nav-button'
-        variant='outlined'>
-            <Link to={'./'} className='navLink'>
-                Home
-            </Link>
-        </Button>
+        <Box className='nav-button-box'>
+            <Button className='nav-button'
+            variant='outlined'>
+                <Link to={'./'} className='navLink'>
+                    Home
+                </Link>
+            </Button>
+        </Box>
 
+        <Box className='nav-button-box'>
+            <Button className='nav-button'
+            variant='outlined'>
+                <Link to={'./store'} className='navLink'>
+                    Store
+                </Link>
+            </Button>
+        </Box>
 
-        <Button className='nav-button'
-        variant='outlined'>
-            <Link to={'./store'} className='navLink'>
-                Store
-            </Link>
-        </Button>
+        <Box className='nav-button-box'>
+            <Button className='nav-button'
+            variant='outlined'>
+                <Link to={'./about'} className='navLink'>
+                    About
+                </Link>
+            </Button>
+        </Box>
 
-        <Button className='nav-button'
-        variant='outlined'>
-            <Link to={'./about'} className='navLink'>
-                About
-            </Link>
-        </Button>
-
-        <Button className='nav-button'
-        variant='outlined'>
-            <Link to={'./contact'} className='navLink'>
-                Contact
-            </Link>
-        </Button>
+        <Box className='nav-button-box'>
+            <Button className='nav-button'
+            variant='outlined'>
+                <Link to={'./contact'} className='navLink'>
+                    Contact
+                </Link>
+            </Button>
+        </Box>
+        
     </Box>
 
   );
