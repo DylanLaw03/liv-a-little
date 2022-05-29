@@ -170,6 +170,7 @@ textarea {
   justify-content: center;
   align-self: center;
   margin: 5px;
+  max-height: 50%;
 }
 
 .post-num {
