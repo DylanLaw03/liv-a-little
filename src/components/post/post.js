@@ -15,6 +15,7 @@ export const Post = props => {
             <Box className="post-num"># {props.postNum}</Box>
             <div className="post-box-inner-wrapper">
                 <Box className="post-image-box" onClick={handleClick}><img className="post-image" src={props.imageURL} alt='Failed to load.'/></Box>
+                <br />
                 <Box className="post-content">{props.postContent}</Box>
             </div>
         </Box>
