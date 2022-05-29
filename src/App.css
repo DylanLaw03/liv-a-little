@@ -5,28 +5,11 @@ textarea {
 }
 
 /*Navbar CSS*/
-.navLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  text-decoration: none;
-  color: black;
-  height: 75px;
-  border-bottom: 1px solid gray;
-  border-right: 1px solid gray;
-}
 
-.navbar {
+.navbar{
   display: flex;
-  flex-direction: column;
-  justify-content: top;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 160px;
-  height: 100%;
-  border-top: 1px solid gray;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .top-left-logo-box {

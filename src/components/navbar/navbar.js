@@ -1,20 +1,44 @@
 import React from 'react';
+import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import { Box } from '@material-ui/core';
-import { NavbarItem } from './navbaritem';
 
 
 
 // navbar component to hold navbar items
 export const NavBar = (props) => {
-    
-    return (
-        // return list of all pages
-        <div className='navbar'>
-                <Box className='top-left-logo-box'><img className='top-left-logo-image' src='./liv-a-little.png' alt="Liv a little logo"></img></Box>
-                <NavbarItem text="Home" link="/" />
-                <NavbarItem text="Store" link="/store" />
-                <NavbarItem text="About" link="/about" />
-                <NavbarItem text="Contact" link="/contact" /> 
-        </div>
-    )
+  return (
+    <Box className='navbar'>
+
+        <Button className='nav-button'
+        variant='outlined'>
+            <Link to={'./'} className='navLink'>
+                Home
+            </Link>
+        </Button>
+
+
+        <Button className='nav-button'
+        variant='outlined'>
+            <Link to={'./store'} className='navLink'>
+                Store
+            </Link>
+        </Button>
+
+        <Button className='nav-button'
+        variant='outlined'>
+            <Link to={'./about'} className='navLink'>
+                About
+            </Link>
+        </Button>
+
+        <Button className='nav-button'
+        variant='outlined'>
+            <Link to={'./contact'} className='navLink'>
+                Contact
+            </Link>
+        </Button>
+    </Box>
+
+  );
 }
